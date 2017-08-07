@@ -2,7 +2,7 @@
 * @Author: dontry
 * @Date:   2017-08-07 11:52:17
 * @Last Modified by:   dontry
-* @Last Modified time: 2017-08-07 22:28:32
+* @Last Modified time: 2017-08-07 23:05:29
 */
 header {
 	.panel-wrapper.halfheight {
@@ -22,12 +22,14 @@ header {
 	background: lighten($dark, 10);
 	text-align: center;
 	transition:
-		font-size .7s ease-out,
 		flex .7s ease-out,
 		background .2s;
 	flex: 1;
 
 	.slogan {
+		transition: 
+			color .7s ease-out,
+			font-size .7s ease-out;
 		font-size: 40px;
 		color: darken($light, 20);
 	}
@@ -36,7 +38,8 @@ header {
 .panel > * {
 	margin: 0;
 	width: 100%;
-	transition: transform .5s;
+	transition: 
+		transform .5s;
 	flex: 1 0 auto;
 	display: flex;
 	justify-content: center;
