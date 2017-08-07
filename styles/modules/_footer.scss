@@ -1,0 +1,30 @@
+/*
+* @Author: dontry
+* @Date:   2017-08-07 14:28:10
+* @Last Modified by:   dontry
+* @Last Modified time: 2017-08-07 14:56:18
+*/
+
+footer {
+    @include container(100%);
+    background: lighten($dark, 20);
+    padding: 30px 0;
+    #contact {
+        text-align: center;
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                padding: 0 10px;
+                i {
+                    color: $light;
+                }
+            }
+        }
+        p {
+            margin-top: 20px;
+            color: $light;
+            word-spacing: .25em;
+        }
+    }
+}

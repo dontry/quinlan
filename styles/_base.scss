@@ -1,0 +1,26 @@
+/*
+* @Author: caidong
+* @Date:   2017-08-07 10:51:13
+* @Last Modified by:   dontry
+* @Last Modified time: 2017-08-07 10:54:50
+*/
+body {
+  font: $mainFont;
+  background: $backgroundColor;
+  color: $typeDefault;
+}
+
+#{headings()} {
+ font: $headFont;
+ color: $headColor;
+ font-weight: $bold;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+p {
+  font-weight: $thin;
+  padding-bottom: 10px;
+}

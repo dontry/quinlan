@@ -1,0 +1,58 @@
+/*
+* @Author: dontry
+* @Date:   2017-08-07 12:18:52
+* @Last Modified by:   dontry
+* @Last Modified time: 2017-08-07 14:47:51
+*/
+#nav {
+  	@include background-image(linear-gradient(top, lighten($navBackground, 10), $navBackground));
+	width: 100vw;
+	z-index: 100;
+
+	.navbar {
+		@include clearfix;
+		ul {
+			@include clearfix;
+			width: 80vw;
+			margin: 0 auto;
+			text-align: center;
+			li {
+				display: inline-block;
+				a {
+					color: $navForeground;
+					font: $mainFont;
+					font-size: 1em;
+					display: inline-block;
+					padding: 10px 22px 10px 22px;
+					text-decoration: none;
+					span {
+						text-transform: uppercase;
+					}
+
+					&:hover {
+						background-color: $navHover;
+						color: $blue;
+					}
+
+					@include breakpoint(0 $small) {
+						padding: 10px 35px;
+						span { display: none}
+					}
+
+					@include breakpoint($small $medium) {
+						padding-left: 10px;
+						i { display: none; }
+					}
+				}
+
+				&.active {
+					background-color: $red;
+					color: $light;
+				}
+			}
+			@include breakpoint(0 $small) {
+				@include span(12)
+			}
+		}
+	}
+}
