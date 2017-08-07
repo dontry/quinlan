@@ -2,7 +2,7 @@
  * @Author: dontry
  * @Date:   2017-08-06 22:20:00
  * @Last Modified by:   dontry
- * @Last Modified time: 2017-08-07 13:18:38
+ * @Last Modified time: 2017-08-07 17:45:33
  */
 
 'use strict';
@@ -26,7 +26,7 @@ let env,
     outputDir,
     sassStyle;
 
-env = 'dev';
+env = 'dist';
 
 if (env === 'dev') {
     outputDir = 'builds/dev/';
