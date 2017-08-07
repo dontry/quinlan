@@ -2,7 +2,7 @@
  * @Author: dontry
  * @Date:   2017-08-06 22:20:00
  * @Last Modified by:   dontry
- * @Last Modified time: 2017-08-07 17:45:33
+ * @Last Modified time: 2017-08-07 22:50:50
  */
 
 'use strict';
@@ -32,12 +32,12 @@ if (env === 'dev') {
     outputDir = 'builds/dev/';
     sassStyle = 'expanded';
 } else {
-    outputDir = 'builds/dist/';
+    outputDir = 'docs/';
     sassStyle = 'compressed'
 }
 
 jsSrc = [
-    'scripts/TweenMax.min.js',
+    'scripts/*.js'
 ]
 
 sassSrc = ['styles/style.scss'];
@@ -47,9 +47,9 @@ cssSrc = ['styles/*.css'];
 
 gulp.task('js', function() {
     gulp.src(jsSrc)
-        .pipe(concat('script.js'))
+        .pipe(concat('bundle.js'))
         .on('error', gutil.log)
-        .pipe(gulpif(env === 'production', uglify()))
+        .pipe(gulpif(env === 'dist', uglify()))
         .pipe(gulp.dest(outputDir + 'scripts'))
         .pipe(connect.reload())
 });

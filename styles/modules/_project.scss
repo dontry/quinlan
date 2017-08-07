@@ -2,31 +2,52 @@
 * @Author: dontry
 * @Date:   2017-08-07 15:04:11
 * @Last Modified by:   dontry
-* @Last Modified time: 2017-08-07 16:02:24
+* @Last Modified time: 2017-08-07 22:49:54
 */
-.project {
-	@include container(100%);
-	@include pad(1,1); //??
 
-	@include display-flex();
+.project {
+    @include container(100%);
+    @include pad(1, 1); //??
+    @include display-flex();
     @include align-items(center);
     @include justify-content(center);
-    opacity: .2;
+    padding: 200px 200px;
 
-    .content {
-		
+    &:after {
+        content: '';
+        opacity: .35;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    h1 {
+    	font-size: 40px;
+    	line-height: 2em;
+        text-align: center;
+        color: lighten($dark, 10);
+    }
+
+    p {
+    	font-size: 30px;
+    	line-height: 1.5em;
+    	word-spacing: .1em;
     }
 }
 
-#film {
-	@include backImage('../assets/img/film.jpg');
+
+
+#film:after {
+    @include backImage('../assets/img/film.jpg');
 }
 
-#photo {
-	@include backImage('../assets/img/photo.jpg');
+#photo:after {
+    @include backImage('../assets/img/photo.jpg');
 }
 
-#volunteer {
-	@include backImage('../assets/img/volunteer.jpg');
+#volunteer:after {
+    @include backImage('../assets/img/volunteer.jpg');
 }
-
